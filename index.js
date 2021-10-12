@@ -114,7 +114,7 @@ console.log(questions);
 
 const init = () => {
     questions()
-    .then((answers) => fs.writeFileSync('TestREADME.md', generateMarkdown(answers)))
+    .then((answers) => fs.writeFileSync('README.md', generateMarkdown(answers)))
     .then(() => console.log('OH JOY! YOUR README IS DONE!'))
     .catch((err) => console.log(err));
 };
