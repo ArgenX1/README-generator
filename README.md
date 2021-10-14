@@ -1,8 +1,12 @@
-# <README-Generator>
+# <README-generator>
 
- ## Description
+## License
 
- A basic README generator that gets you started writing a README
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Description
+
+ A simple README generator
 
  ## Table of Contents
 
@@ -14,7 +18,7 @@
 
  ## Installation
 
- Make sure to initialize and install NPM
+ 
 
  ## Usage
 
@@ -27,23 +31,24 @@
 
  List your collaborators, if any, or any external resources used.
 
- ## License
-
- MIT
 
  ## How to Contribute
 
- Send money to my Venmo!
+ 
 
  ## Tests
 
  
+
+ ## Links
+
+ (https://opensource.org/licenses/MIT)
  
- ##Questions
+ ## Questions
 
  If you have any further questions, message me on:
 
-  - GitHub: ArgenX1
+  - GitHub: [ArgenX1](https://github.com/ArgenX1)
   - Email: djc.arizona@gmail.com
  
  

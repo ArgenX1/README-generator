@@ -50,19 +50,51 @@ const questions = () => {
             type: 'list',
             name: 'license',
             message: 'Which license do you want?',
-            choices: ['MIT']
+            choices: ['MIT', 'Apache License 2.0', 'Mozilla Public License 2.0',]
         },
 
     ]);
 };
 console.log(questions);
 
+const renderLicenseBadge = (license) => {
+    switch (license) {
+        case 'MIT':
+            return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+        case 'Apache License 2.0':
+            return '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
+        case 'Mozilla Public License 2.0':
+            return '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
+        default:
+            return ''
+    }
+}
+const renderLicenseLink = (license) => {
+    switch (license) {
+        case 'MIT':
+            return '(https://opensource.org/licenses/MIT)'
+        case 'Apache License 2.0':
+            return '(https://opensource.org/licenses/Apache-2.0)'
+        case 'Mozilla Public License 2.0':
+            return '(https://opensource.org/licenses/MPL-2.0)'
+        default:
+            return ''
+    }
+}
+
+
+
+
 // function to write README file
 
- const generateMarkdown = ({username, email, project, description, installation, usage, contribution, test, license}) => 
- `# <${project}>
+const generateMarkdown = ({username, email, project, description, installation, usage, contribution, test, license}) => 
+`# <${project}>
 
- ## Description
+## License
+
+${renderLicenseBadge(license)}
+
+## Description
 
  ${description}
 
@@ -89,9 +121,6 @@ console.log(questions);
 
  List your collaborators, if any, or any external resources used.
 
- ## License
-
- ${license}
 
  ## How to Contribute
 
@@ -100,12 +129,16 @@ console.log(questions);
  ## Tests
 
  ${test}
+
+ ## Links
+
+ ${renderLicenseLink(license)}
  
- ##Questions
+ ## Questions
 
  If you have any further questions, message me on:
 
-  - GitHub: ${username}
+  - GitHub: [${username}](https://github.com/${username})
   - Email: ${email}
  
  `
